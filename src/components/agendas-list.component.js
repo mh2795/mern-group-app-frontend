@@ -35,7 +35,7 @@ export default class AgendasList extends Component {
   }
 
   deleteAgenda(id) {
-    axios.delete('http://personal-tracker-mrt.herokuapp.com/agenda/'+id)
+    axios.delete('http://personal-tracker-mrt.herokuapp.com/agenda/id/'+id)
       .then(response => { console.log(response.data)});
 
     this.setState({
@@ -65,6 +65,9 @@ export default class AgendasList extends Component {
             { this.agendaList()}
           </tbody>
         </table>
+        <Link to={"/application/"}>
+            <button type="submit" class="btn btn-primary">Add Entry</button>
+        </Link>
       </div>
     )
   }
