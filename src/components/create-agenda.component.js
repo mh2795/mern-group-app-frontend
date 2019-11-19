@@ -68,7 +68,7 @@ export default class CreateAgenda extends Component {
         </div>
 
         <div className="form-group">
-          <input type="submit" value="Add Skill" className="btn btn-primary" />
+          <input type="submit" value="Save Entry" className="btn btn-primary" />
         </div>
       </form>
     </div>

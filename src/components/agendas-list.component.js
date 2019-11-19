@@ -66,7 +66,7 @@ export default class AgendasList extends Component {
           </tbody>
         </table>
         <Link to={"/agenda/create"}>
-            <button type="submit" class="btn btn-primary">Add Entry</button>
+            <button type="submit" class="btn btn-primary">New Entry</button>
         </Link>
       </div>
     )

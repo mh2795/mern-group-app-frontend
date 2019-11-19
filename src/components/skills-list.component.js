@@ -69,7 +69,7 @@ export default class SkillsList extends Component {
         </table>
 
         <Link to={"/skill/create"}>
-            <button type="submit" class="btn btn-primary ">Add Skill</button>
+            <button type="submit" class="btn btn-primary ">New Skill</button>
         </Link>
 
 

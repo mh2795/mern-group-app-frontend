@@ -66,8 +66,8 @@ export default class EditAgenda extends Component {
           <input  type="text"
               required
               className="form-control"
-              value={this.state.skill}
-              onChange={this.onChangeSkill}
+              value={this.state.eventType}
+              onChange={this.onChangeEventType}
               />
         </div>
         <div className="form-group"> 
@@ -75,13 +75,13 @@ export default class EditAgenda extends Component {
           <input  type="text"
               required
               className="form-control"
-              value={this.state.proficiency}
-              onChange={this.onChangeProficiency}
+              value={this.state.description}
+              onChange={this.onChangeDescription}
               />
         </div>
 
         <div className="form-group">
-          <input type="submit" value="Edit Entry" className="btn btn-primary" />
+          <input type="submit" value="Update Entry" className="btn btn-primary" />
         </div>
       </form>
     </div>
