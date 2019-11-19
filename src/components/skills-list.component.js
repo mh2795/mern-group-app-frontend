@@ -9,7 +9,7 @@ const Skill = props => (
     <td>{props.skill.proficiency}</td>
     <td>{props.skill.example}</td>
     <td>
-      <Link to={"/edit/"+props.skill._id}>edit</Link> | <a href="#" onClick={() => { props.deleteSkill(props.skill._id) }}>delete</a>
+      <Link to={"skill/edit/"+props.skill._id}>edit</Link> | <a href="#" onClick={() => { props.deleteSkill(props.skill._id) }}>delete</a>
     </td>
   </tr>
 )

@@ -8,7 +8,7 @@ const Agenda = props => (
     <td>{props.agenda.eventType}</td>
     <td>{props.agenda.description}</td>
     <td>
-      <Link to={"/edit/"+props.agenda._id}>edit</Link> | <a href="#" onClick={() => { props.deleteAgenda(props.agenda._id) }}>delete</a>
+      <Link to={"agenda/edit/"+props.agenda._id}>edit</Link> | <a href="#" onClick={() => { props.deleteAgenda(props.agenda._id) }}>delete</a>
     </td>
   </tr>
 )

@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import SkillsList from './skills-list.component';
 
 const Application = props => (
   <tr>
@@ -12,7 +11,7 @@ const Application = props => (
     <td>{props.application.rate}</td>
     <td>{props.application.status}</td>
     <td>
-      <Link to={"/edit/"+props.application._id}>edit</Link> | <a href="#" onClick={() => { props.deleteApplication(props.application._id) }}>delete</a>
+      <Link to={"application/edit/"+props.application._id}>edit</Link> | <a href="#" onClick={() => { props.deleteApplication(props.application._id) }}>delete</a>
     </td>
   </tr>
 )
