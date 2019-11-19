@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import SkillsList from './skills-list.component';
 
 const Application = props => (
   <tr>
@@ -38,7 +39,7 @@ export default class ApplicationsList extends Component {
   }
 
   deleteApplication(id) {
-    axios.delete('http://personal-tracker-mrt.herokuapp.com/application/'+id)
+    axios.delete('http://personal-tracker-mrt.herokuapp.com/application/id/'+id)
       .then(response => { console.log(response.data)});
 
     this.setState({
@@ -48,7 +49,7 @@ export default class ApplicationsList extends Component {
 
   applicationList() {
     return this.state.applications.map(currentapplication => {
-      return <Application application={currentapplication} deleteSkill={this.deleteApplication} key={currentapplication._id}/>;
+      return <Application application={currentapplication} deleteApplication={this.deleteApplication} key={currentapplication._id}/>;
     })
   }
 
@@ -71,6 +72,9 @@ export default class ApplicationsList extends Component {
             { this.applicationList()}
           </tbody>
         </table>
+        <button >      
+            <Link to={"/skill/"}>New Application</Link>
+        </button>
       </div>
     )
   }
