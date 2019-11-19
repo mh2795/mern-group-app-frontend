@@ -1,52 +1,43 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export default class CreateSkill extends Component {
+export default class CreateAgenda extends Component {
   constructor(props) {
     super(props);
 
-    this.onChangeSkill = this.onChangeSkill.bind(this);
-    this.onChangeProficiency = this.onChangeProficiency.bind(this);
-    this.onChangeExample = this.onChangeExample.bind(this);
+    this.onChangeEventType = this.onChangeEventType.bind(this);
+    this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      skill: '',
-      proficiency: '',
-      example: '',
+      eventType: '',
+      description: '',
     }
   }
 
-  onChangeSkill(e) {
+  onChangeEventType(e) {
     this.setState({
-      skill: e.target.value
+      eventType: e.target.value
     })
   }
 
-  onChangeProficiency(e) {
+  onChangeDescription(e) {
     this.setState({
-      proficiency: e.target.value
-    })
-  }
-
-  onChangeExample(e) {
-    this.setState({
-      example: e.target.value
+      description: e.target.value
     })
   }
 
   onSubmit(e) {
     e.preventDefault();
 
-    const skill = {
-      skill: this.state.skill,
-      proficiency: this.state.proficiency,
-      example: this.state.example,
+    const agenda = {
+      eventType: this.state.eventType,
+      description: this.state.description,
     }
 
-    console.log(skill);
+    console.log(agenda);
 
-    axios.post('https://personal-tracker-mrt.herokuapp.com/skill', skill)
+    axios.post('https://personal-tracker-mrt.herokuapp.com/agenda', agenda)
       .then(res => console.log(res.data));
 
     window.location = '/';
@@ -55,10 +46,10 @@ export default class CreateSkill extends Component {
   render() {
     return (
     <div>
-      <h3>Add New Skill</h3>
+      <h3>Add New Entry</h3>
       <form onSubmit={this.onSubmit}>
       <div className="form-group"> 
-          <label>Skill: </label>
+          <label>Upcoming Event: </label>
           <input  type="text"
               required
               className="form-control"
@@ -67,21 +58,12 @@ export default class CreateSkill extends Component {
               />
         </div>
         <div className="form-group"> 
-          <label>Proficiency: </label>
+          <label>Description: </label>
           <input  type="text"
               required
               className="form-control"
               value={this.state.proficiency}
               onChange={this.onChangeProficiency}
-              />
-        </div>
-        <div className="form-group">
-          <label>Example: </label>
-          <input 
-              type="text" 
-              className="form-control"
-              value={this.state.example}
-              onChange={this.onChangeExample}
               />
         </div>
 
