@@ -53,8 +53,8 @@ export default class CreateAgenda extends Component {
           <input  type="text"
               required
               className="form-control"
-              value={this.state.skill}
-              onChange={this.onChangeSkill}
+              value={this.state.eventType}
+              onChange={this.onChangeEventType}
               />
         </div>
         <div className="form-group"> 
@@ -62,8 +62,8 @@ export default class CreateAgenda extends Component {
           <input  type="text"
               required
               className="form-control"
-              value={this.state.proficiency}
-              onChange={this.onChangeProficiency}
+              value={this.state.description}
+              onChange={this.onChangeDescription}
               />
         </div>
 
