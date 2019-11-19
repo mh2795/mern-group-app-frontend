@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+import Button from './reusable components/Button'
+
 const Application = props => (
   <tr>
     <td>{props.application.company}</td>
@@ -11,7 +13,7 @@ const Application = props => (
     <td>{props.application.rate}</td>
     <td>{props.application.status}</td>
     <td>
-      <Link to={"application/edit/"+props.application._id}>edit</Link> | <a href="#" onClick={() => { props.deleteApplication(props.application._id) }}>delete</a>
+      <Link to={"application/edit/"+props.application._id}><Button label="Edit" type="edit"/></Link> <a href="#" onClick={() => { props.deleteApplication(props.application._id) }}><Button label="Delete" type="delete"/></a>
     </td>
   </tr>
 )

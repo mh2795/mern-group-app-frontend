@@ -3,12 +3,14 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+import Button from './reusable components/Button'
+
 const Agenda = props => (
   <tr>
     <td>{props.agenda.eventType}</td>
     <td>{props.agenda.description}</td>
     <td>
-      <Link to={"agenda/edit/"+props.agenda._id}>edit</Link> | <a href="#" onClick={() => { props.deleteAgenda(props.agenda._id) }}>delete</a>
+      <Link to={"agenda/edit/"+props.agenda._id}><Button label="Edit" type="edit"/></Link>  <a href="#" onClick={() => { props.deleteAgenda(props.agenda._id) }}><Button label="Delete" type="delete"/></a>
     </td>
   </tr>
 )

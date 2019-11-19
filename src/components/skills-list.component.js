@@ -3,13 +3,16 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+import Button from './reusable components/Button'
+
+
 const Skill = props => (
   <tr>
     <td>{props.skill.skill}</td>
     <td>{props.skill.proficiency}</td>
     <td>{props.skill.example}</td>
     <td>
-      <Link to={"skill/edit/"+props.skill._id}>edit</Link> | <a href="#" onClick={() => { props.deleteSkill(props.skill._id) }}>delete</a>
+      <Link to={"skill/edit/"+props.skill._id}><Button label="Edit" type="edit"/></Link>  <a href="#" onClick={() => { props.deleteSkill(props.skill._id) }}><Button label="Delete" type="delete"/></a>
     </td>
   </tr>
 )
