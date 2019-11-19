@@ -73,7 +73,6 @@ export default class SkillsList extends Component {
         </Link>
 
 
-
       </div>
     )
   }
