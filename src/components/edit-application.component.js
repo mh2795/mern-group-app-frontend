@@ -80,10 +80,10 @@ export default class EditApplication extends Component {
 
     console.log(application);
 
-    axios.post('https://personal-tracker-mrt.herokuapp.com/application', application)
+    axios.put('https://personal-tracker-mrt.herokuapp.com/application/id/' + this.props.match.params.id, application)
       .then(res => console.log(res.data));
 
-    window.location = '/';
+    // window.location = '/';
   }
 
   render() {

@@ -40,7 +40,7 @@ export default class CreateAgenda extends Component {
     axios.post('https://personal-tracker-mrt.herokuapp.com/agenda', agenda)
       .then(res => console.log(res.data));
 
-    window.location = '/';
+    // window.location = '/';
   }
 
   render() {
