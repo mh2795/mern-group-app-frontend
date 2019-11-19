@@ -72,9 +72,9 @@ export default class ApplicationsList extends Component {
             { this.applicationList()}
           </tbody>
         </table>
-        <button >      
-            <Link to={"/skill/"}>New Application</Link>
-        </button>
+        <Link to={"/agenda/"}>
+            <button type="submit" class="btn btn-primary">New Application</button>
+        </Link>
       </div>
     )
   }

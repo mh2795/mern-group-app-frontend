@@ -67,9 +67,12 @@ export default class SkillsList extends Component {
             { this.skillList()}
           </tbody>
         </table>
-        <button >      
-            <Link to={"/agenda/"}>New Skill</Link>
-        </button>
+
+        <Link to={"/agenda/"}>
+            <button type="submit" class="btn btn-primary ">Add Skill</button>
+        </Link>
+
+
 
       </div>
     )
