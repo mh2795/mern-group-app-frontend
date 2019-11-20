@@ -1,0 +1,43 @@
+input {
+  color: white;
+  padding: 12px 25px;
+  border: solid 1px;
+  border-radius: 3px;
+}
+
+.input_butt-new {
+  background-color: rgb(51, 160, 255);
+  border-color: rgb(51, 160, 255);
+}
+
+.input_butt-new:hover {
+  background-color: rgb(0, 136, 255);
+  border-color: rgb(0, 136, 255);
+}
+
+.input_butt-edit {
+  background-color: rgb(255, 198, 0);
+  border-color: rgb(255, 198, 0);
+}
+.input_butt-edit:hover {
+  background-color: rgb(255, 213, 61);
+  border-color: rgb(255, 213, 61);
+}
+
+.input_butt-delete {
+  background-color: rgb(255, 104, 117);
+  border-color: rgb(255, 104, 117);
+}
+.input_butt-delete:hover {
+  background-color: rgb(255, 0, 21);
+  border-color: rgb(246, 0, 21);
+}
+.input_butt-save {
+  background-color: rgb(10, 208, 10);
+  border-color: rgb(10, 208, 10);
+}
+.input_butt-save:hover {
+  background-color: rgb(0, 156, 0);
+  border-color: rgb(0, 156, 0);
+}
+

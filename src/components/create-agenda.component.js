@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import InputTypeSubmit from './simple.components/InputTypeSubmit'
+
 export default class CreateAgenda extends Component {
   constructor(props) {
     super(props);
@@ -68,7 +70,7 @@ export default class CreateAgenda extends Component {
         </div>
 
         <div className="form-group">
-          <input type="submit" value="Save Entry" className="btn btn-primary" />
+          <InputTypeSubmit label="Save Entry" type="save"/>
         </div>
       </form>
     </div>

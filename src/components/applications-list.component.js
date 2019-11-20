@@ -1,9 +1,10 @@
-  
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-import Button from './reusable components/Button'
+import InputTypeSubmit from './simple.components/InputTypeSubmit'
+import Button from './simple.components/Button'
 
 const Application = props => (
   <tr>
@@ -13,7 +14,12 @@ const Application = props => (
     <td>{props.application.rate}</td>
     <td>{props.application.status}</td>
     <td>
-      <Link to={"application/edit/"+props.application._id}><Button label="Edit" type="edit"/></Link> <a href="#" onClick={() => { props.deleteApplication(props.application._id) }}><Button label="Delete" type="delete"/></a>
+      <Link to={"application/edit/" + props.application._id}>
+        <InputTypeSubmit label="Edit" type="edit" />
+      </Link>
+      <a href="#" onClick={() => { props.deleteApplication(props.application._id) }}>
+        <InputTypeSubmit label="Delete" type="delete" />
+      </a>
     </td>
   </tr>
 )
@@ -25,7 +31,7 @@ export default class ApplicationsList extends Component {
 
     this.deleteApplication = this.deleteApplication.bind(this)
 
-    this.state = {applications: []};
+    this.state = { applications: [] };
   }
 
   componentDidMount() {
@@ -33,15 +39,15 @@ export default class ApplicationsList extends Component {
       .then(response => {
         this.setState({ applications: response.data })
       },
-      console.log(this.state.applications))
+        console.log(this.state.applications))
       .catch((error) => {
         console.log(error);
       })
   }
 
   deleteApplication(id) {
-    axios.delete('http://personal-tracker-mrt.herokuapp.com/application/id/'+id)
-      .then(response => { console.log(response.data)});
+    axios.delete('http://personal-tracker-mrt.herokuapp.com/application/id/' + id)
+      .then(response => { console.log(response.data) });
 
     this.setState({
       applications: this.state.applications.filter(el => el._id !== id)
@@ -50,7 +56,7 @@ export default class ApplicationsList extends Component {
 
   applicationList() {
     return this.state.applications.map(currentapplication => {
-      return <Application application={currentapplication} deleteApplication={this.deleteApplication} key={currentapplication._id}/>;
+      return <Application application={currentapplication} deleteApplication={this.deleteApplication} key={currentapplication._id} />;
     })
   }
 
@@ -70,11 +76,11 @@ export default class ApplicationsList extends Component {
             </tr>
           </thead>
           <tbody>
-            { this.applicationList()}
+            {this.applicationList()}
           </tbody>
         </table>
         <Link to={"/application/create"}>
-            <button type="submit" class="btn btn-primary">New Application</button>
+          <Button label="New Application"></Button>
         </Link>
       </div>
     )

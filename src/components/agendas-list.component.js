@@ -1,16 +1,22 @@
-  
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-import Button from './reusable components/Button'
+import InputTypeSubmit from './simple.components/InputTypeSubmit'
+import Button from './simple.components/Button'
 
 const Agenda = props => (
   <tr>
     <td>{props.agenda.eventType}</td>
     <td>{props.agenda.description}</td>
     <td>
-      <Link to={"agenda/edit/"+props.agenda._id}><Button label="Edit" type="edit"/></Link>  <a href="#" onClick={() => { props.deleteAgenda(props.agenda._id) }}><Button label="Delete" type="delete"/></a>
+      <Link to={"agenda/edit/" + props.agenda._id}>
+        <InputTypeSubmit label="Edit" type="edit" />
+      </Link>
+      <a href="#" onClick={() => { props.deleteAgenda(props.agenda._id) }}>
+        <InputTypeSubmit label="Delete" type="delete" />
+      </a>
     </td>
   </tr>
 )
@@ -22,7 +28,7 @@ export default class AgendasList extends Component {
 
     this.deleteAgenda = this.deleteAgenda.bind(this)
 
-    this.state = {agendas: []};
+    this.state = { agendas: [] };
   }
 
   componentDidMount() {
@@ -30,15 +36,15 @@ export default class AgendasList extends Component {
       .then(response => {
         this.setState({ agendas: response.data })
       },
-      console.log(this.state.agendas))
+        console.log(this.state.agendas))
       .catch((error) => {
         console.log(error);
       })
   }
 
   deleteAgenda(id) {
-    axios.delete('http://personal-tracker-mrt.herokuapp.com/agenda/id/'+id)
-      .then(response => { console.log(response.data)});
+    axios.delete('http://personal-tracker-mrt.herokuapp.com/agenda/id/' + id)
+      .then(response => { console.log(response.data) });
 
     this.setState({
       agendas: this.state.agendas.filter(el => el._id !== id)
@@ -47,7 +53,7 @@ export default class AgendasList extends Component {
 
   agendaList() {
     return this.state.agendas.map(currentagenda => {
-      return <Agenda agenda={currentagenda} deleteAgenda={this.deleteAgenda} key={currentagenda._id}/>;
+      return <Agenda agenda={currentagenda} deleteAgenda={this.deleteAgenda} key={currentagenda._id} />;
     })
   }
 
@@ -64,11 +70,11 @@ export default class AgendasList extends Component {
             </tr>
           </thead>
           <tbody>
-            { this.agendaList()}
+            {this.agendaList()}
           </tbody>
         </table>
         <Link to={"/agenda/create"}>
-            <button type="submit" class="btn btn-primary">New Entry</button>
+          <Button label="New Entry"></Button>
         </Link>
       </div>
     )

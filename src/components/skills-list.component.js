@@ -1,9 +1,10 @@
-  
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-import Button from './reusable components/Button'
+import InputTypeSubmit from './simple.components/InputTypeSubmit'
+import Button from './simple.components/Button'
 
 
 const Skill = props => (
@@ -12,7 +13,12 @@ const Skill = props => (
     <td>{props.skill.proficiency}</td>
     <td>{props.skill.example}</td>
     <td>
-      <Link to={"skill/edit/"+props.skill._id}><Button label="Edit" type="edit"/></Link>  <a href="#" onClick={() => { props.deleteSkill(props.skill._id) }}><Button label="Delete" type="delete"/></a>
+      <Link to={"skill/edit/" + props.skill._id}>
+        <InputTypeSubmit label="Edit" type="edit" />
+      </Link>
+      <a href="#" onClick={() => { props.deleteSkill(props.skill._id) }}>
+        <InputTypeSubmit label="Delete" type="delete" />
+      </a>
     </td>
   </tr>
 )
@@ -24,7 +30,7 @@ export default class SkillsList extends Component {
 
     this.deleteSkill = this.deleteSkill.bind(this)
 
-    this.state = {skills: []};
+    this.state = { skills: [] };
   }
 
   componentDidMount() {
@@ -32,15 +38,15 @@ export default class SkillsList extends Component {
       .then(response => {
         this.setState({ skills: response.data })
       },
-      console.log(this.state.skills))
+        console.log(this.state.skills))
       .catch((error) => {
         console.log(error);
       })
   }
 
   deleteSkill(id) {
-    axios.delete('http://personal-tracker-mrt.herokuapp.com/skill/id/'+id)
-      .then(response => { console.log(response.data)});
+    axios.delete('http://personal-tracker-mrt.herokuapp.com/skill/id/' + id)
+      .then(response => { console.log(response.data) });
 
     this.setState({
       skills: this.state.skills.filter(el => el._id !== id)
@@ -49,7 +55,7 @@ export default class SkillsList extends Component {
 
   skillList() {
     return this.state.skills.map(currentskill => {
-      return <Skill skill={currentskill} deleteSkill={this.deleteSkill} key={currentskill._id}/>;
+      return <Skill skill={currentskill} deleteSkill={this.deleteSkill} key={currentskill._id} />;
     })
   }
 
@@ -67,12 +73,12 @@ export default class SkillsList extends Component {
             </tr>
           </thead>
           <tbody>
-            { this.skillList()}
+            {this.skillList()}
           </tbody>
         </table>
 
         <Link to={"/skill/create"}>
-            <button type="submit" class="btn btn-primary ">New Skill</button>
+          <Button label="New Skill"></Button>
         </Link>
 
 
