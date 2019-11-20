@@ -67,7 +67,7 @@ export default class CreateApplication extends Component {
     axios.post('https://personal-tracker-mrt.herokuapp.com/application', application)
       .then(res => console.log(res.data));
 
-    // window.location = '/';
+    setInterval(function(){ window.location = '/'}, 1000);
   }
 
   render() {

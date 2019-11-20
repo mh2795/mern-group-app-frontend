@@ -53,7 +53,7 @@ export default class EditAgenda extends Component {
     axios.put('https://personal-tracker-mrt.herokuapp.com/agenda/id/' + this.props.match.params.id, agenda)
       .then(res => console.log(res.data));
 
-    // window.location = '/';
+    setInterval(function(){ window.location = '/'}, 1000);
   }
 
   render() {

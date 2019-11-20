@@ -64,7 +64,7 @@ export default class EditSkill extends Component {
     axios.put('https://personal-tracker-mrt.herokuapp.com/skill/id/' + this.props.match.params.id, skill)
       .then(res => console.log(res.data));
 
-    // window.location = '/';
+    setInterval(function(){ window.location = '/'}, 1000);
   }
 
   render() {

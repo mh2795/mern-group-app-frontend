@@ -49,7 +49,7 @@ export default class CreateSkill extends Component {
     axios.post('https://personal-tracker-mrt.herokuapp.com/skill', skill)
       .then(res => console.log(res.data));
 
-    // window.location = '/';
+    setInterval(function(){ window.location = '/'}, 1000);
   }
 
   render() {
