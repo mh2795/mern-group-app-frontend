@@ -45,7 +45,7 @@ export default class SkillsList extends Component {
   }
 
   deleteSkill(id) {
-    axios.delete('http://personal-tracker-mrt.herokuapp.com/skill/id/' + id)
+    axios.delete('https://personal-tracker-mrt.herokuapp.com/skill/id/' + id)
       .then(response => { console.log(response.data) });
 
     this.setState({
