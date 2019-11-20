@@ -3,7 +3,6 @@ import axios from 'axios';
 
 import InputTypeSubmit from './simple.components/InputTypeSubmit'
 
-
 export default class EditApplication extends Component {
   constructor(props) {
     super(props);
