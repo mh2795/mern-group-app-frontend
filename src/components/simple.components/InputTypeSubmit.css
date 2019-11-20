@@ -3,6 +3,7 @@ input {
   padding: 12px 25px;
   border: solid 1px;
   border-radius: 3px;
+  margin: 5px;
 }
 
 .input_butt-new {
