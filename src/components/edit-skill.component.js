@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import InputTypeSubmit from './simple.components/InputTypeSubmit'
+
 export default class EditSkill extends Component {
   constructor(props) {
     super(props);
@@ -101,7 +103,7 @@ export default class EditSkill extends Component {
         </div>
 
         <div className="form-group">
-          <input type="submit" value="Update Skill" className="btn btn-primary" />
+          <InputTypeSubmit type="save" label="Update Skill" />
         </div>
       </form>
     </div>

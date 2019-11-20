@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import InputTypeSubmit from './simple.components/InputTypeSubmit'
+
+
 export default class EditApplication extends Component {
   constructor(props) {
     super(props);
@@ -138,7 +141,7 @@ export default class EditApplication extends Component {
         </div>
 
         <div className="form-group">
-          <input type="submit" value="Update Application" className="btn btn-primary" />
+          <InputTypeSubmit type="save" label="Update Application" />
         </div>
       </form>
     </div>
