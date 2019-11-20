@@ -35,7 +35,7 @@ export default class ApplicationsList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://personal-tracker-mrt.herokuapp.com/application')
+    axios.get('https://personal-tracker-mrt.herokuapp.com/application')
       .then(response => {
         this.setState({ applications: response.data })
       },
@@ -46,7 +46,7 @@ export default class ApplicationsList extends Component {
   }
 
   deleteApplication(id) {
-    axios.delete('http://personal-tracker-mrt.herokuapp.com/application/id/' + id)
+    axios.delete('https://personal-tracker-mrt.herokuapp.com/application/id/' + id)
       .then(response => { console.log(response.data) });
 
     this.setState({

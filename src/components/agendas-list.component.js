@@ -32,7 +32,7 @@ export default class AgendasList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://personal-tracker-mrt.herokuapp.com/agenda')
+    axios.get('https://personal-tracker-mrt.herokuapp.com/agenda')
       .then(response => {
         this.setState({ agendas: response.data })
       },
@@ -43,7 +43,7 @@ export default class AgendasList extends Component {
   }
 
   deleteAgenda(id) {
-    axios.delete('http://personal-tracker-mrt.herokuapp.com/agenda/id/' + id)
+    axios.delete('https://personal-tracker-mrt.herokuapp.com/agenda/id/' + id)
       .then(response => { console.log(response.data) });
 
     this.setState({

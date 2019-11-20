@@ -34,7 +34,7 @@ export default class SkillsList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://personal-tracker-mrt.herokuapp.com/skill')
+    axios.get('https://personal-tracker-mrt.herokuapp.com/skill')
       .then(response => {
         this.setState({ skills: response.data })
       },
