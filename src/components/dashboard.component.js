@@ -17,6 +17,7 @@ export default class Dashboard extends Component {
             <br></br>
             <hr></hr>
             <ApplicationsList />
+            <br></br>
         </div>
     )
   }
