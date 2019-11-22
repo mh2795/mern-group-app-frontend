@@ -1,11 +1,13 @@
 import React from 'react'
 import { render } from 'enzyme'
 
+import Router from 'react-router-dom'  
+
 import Dashboard from './dashboard.component'
 
 describe('Dashboard component', () => {
   it('should render a div with 6 children', () => {
-    const wrapper = render(<Dashboard/>)
+    const wrapper = render(<Router><Dashboard/></Router>)
     expect(wrapper.find(<div />)).toHaveLength(6)
   })
 })

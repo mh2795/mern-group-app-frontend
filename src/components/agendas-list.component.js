@@ -10,7 +10,7 @@ const Agenda = props => (
   <tr>
     <td>{props.agenda.eventType}</td>
     <td>{props.agenda.description}</td>
-    <td>
+    <td className="text-right">
       <Link to={"agenda/edit/" + props.agenda._id}>
         <InputTypeSubmit label="Edit" type="edit" />
       </Link>
@@ -65,8 +65,8 @@ export default class AgendasList extends Component {
           <thead className="thead-light">
             <tr>
               <th>Upcoming Event</th>
-              <th>Description</th>
-              <th>Actions</th>
+              <th className="text-center">Description</th>
+              <th className="text-right pr-4">Actions</th>
             </tr>
           </thead>
           <tbody>
