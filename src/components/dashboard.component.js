@@ -11,7 +11,11 @@ export default class Dashboard extends Component {
     return (
         <div>
             <SkillsList />
+            <br></br>
+            <hr></hr>
             <AgendasList />
+            <br></br>
+            <hr></hr>
             <ApplicationsList />
         </div>
     )

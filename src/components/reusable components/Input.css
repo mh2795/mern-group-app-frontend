@@ -1,0 +1,13 @@
+
+.input-default {
+  border-radius: 5px;
+  padding: 10px;
+  color: rgb(86, 89, 92);
+  letter-spacing: 1px;
+  font-family: "Helvetica";
+  font-weight: lighter;
+  font-size: inherit;
+  display: block;
+  border: solid #e5e8ea 1px;
+  width: 300px;
+}
