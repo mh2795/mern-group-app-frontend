@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route} from "react-router-dom";
 
 import Navbar from "./components/navbar.component";
+import LandingPage from "./components/landing-page.component";
 import Dashboard from "./components/dashboard.component";
 import SkillsList from "./components/skills-list.component";
 import EditSkill from "./components/edit-skill.component";
@@ -20,7 +21,8 @@ function App() {
       <div className="container">
       <Navbar />
       <br/>
-      <Route path="/" exact component={Dashboard} />
+      <Route path="/" exact component={LandingPage} />
+      <Route path="/dashboard" exact component={Dashboard} />
       <Route path="/skill" exact component={SkillsList} />
       <Route path="/skill/edit/:id" component={EditSkill} />
       <Route path="/skill/create" component={CreateSkill} />
