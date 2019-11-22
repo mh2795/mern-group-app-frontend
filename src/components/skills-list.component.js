@@ -12,7 +12,7 @@ const Skill = props => (
     <td>{props.skill.skill}</td>
     <td>{props.skill.proficiency}</td>
     <td>{props.skill.example}</td>
-    <td>
+    <td className="text-right">
       <Link to={"skill/edit/" + props.skill._id}>
         <InputTypeSubmit label="Edit" type="edit" />
       </Link>
@@ -69,7 +69,7 @@ export default class SkillsList extends Component {
               <th>Skill</th>
               <th>Proficiency</th>
               <th>Example</th>
-              <th>Actions</th>
+              <th className="text-right pr-4">Actions</th>
             </tr>
           </thead>
           <tbody>

@@ -13,7 +13,7 @@ const Application = props => (
     <td>{props.application.link}</td>
     <td>{props.application.rate}</td>
     <td>{props.application.status}</td>
-    <td>
+    <td className="text-right">
       <Link to={"application/edit/" + props.application._id}>
         <InputTypeSubmit label="Edit" type="edit" />
       </Link>
@@ -72,7 +72,7 @@ export default class ApplicationsList extends Component {
               <th>Link</th>
               <th>Rate</th>
               <th>Status</th>
-              <th>Actions</th>
+              <th className="text-right pr-4">Actions</th>
             </tr>
           </thead>
           <tbody>
