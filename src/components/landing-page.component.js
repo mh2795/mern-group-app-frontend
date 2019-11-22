@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import "./landing-page.css"
 const image = require('../images/job-search.jpg')
 
 export default class LandingPage extends Component {
   
   render() {
     return (
-        <div className="d-flex pt-5">
+        <div className="landing d-flex pt-5">
             <div>
                 <h1 className="text-center py-5">OTOI</h1>
                 <br></br>
