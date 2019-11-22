@@ -36,6 +36,8 @@ You will need to do the following before getting started.
 npm install  
 ```
 **By doing npm install the following should be installed.**
+
+
 <img width="346" alt="Dependicies" src="https://user-images.githubusercontent.com/54545904/69439261-98115080-0d14-11ea-88da-835de82518eb.png">
 
 
