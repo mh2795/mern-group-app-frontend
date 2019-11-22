@@ -42,7 +42,7 @@ export default class CreateAgenda extends Component {
     axios.post('https://personal-tracker-mrt.herokuapp.com/agenda', agenda)
       .then(res => console.log(res.data));
 
-    setInterval(function(){ window.location = '/'}, 1000);
+    setInterval(function(){ window.location = '/dashboard'}, 1000);
   }
 
   render() {

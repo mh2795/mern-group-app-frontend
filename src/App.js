@@ -18,9 +18,10 @@ import CreateApplication from "./components/create-application.component";
 function App() {
   return (
     <Router>
-      <div className="container">
+      <div>
       <Navbar />
-      <br/>
+      <br></br>
+      <div className="container">
       <Route path="/" exact component={LandingPage} />
       <Route path="/dashboard" exact component={Dashboard} />
       <Route path="/skill" exact component={SkillsList} />
@@ -32,7 +33,7 @@ function App() {
       <Route path="/application" exact component={ApplicationsList} />
       <Route path="/application/edit/:id" component={EditApplication} />
       <Route path="/application/create" component={CreateApplication} />
-
+      </div>
       </div>
     </Router>
   );
