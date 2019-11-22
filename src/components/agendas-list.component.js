@@ -8,14 +8,14 @@ import Button from './simple.components/Button'
 
 const Agenda = props => (
   <tr>
-    <td>{props.agenda.eventType}</td>
-    <td>{props.agenda.description}</td>
+    <td className="align-middle">{props.agenda.eventType}</td>
+    <td className="align-middle">{props.agenda.description}</td>
     <td className="text-right">
       <Link to={"agenda/edit/" + props.agenda._id}>
-        <InputTypeSubmit label="Edit" type="edit" />
+        <InputTypeSubmit label="✏️" type="edit" />
       </Link>
       <a href="#" onClick={() => { props.deleteAgenda(props.agenda._id) }}>
-        <InputTypeSubmit label="Delete" type="delete" />
+        <InputTypeSubmit label="🗑" type="delete" />
       </a>
     </td>
   </tr>

@@ -16,19 +16,11 @@ input {
   border-color: rgb(0, 136, 255);
 }
 
-.input_butt-edit {
-  background-color: rgb(255, 198, 0);
-  border-color: rgb(255, 198, 0);
-}
 .input_butt-edit:hover {
   background-color: rgb(255, 213, 61);
   border-color: rgb(255, 213, 61);
 }
 
-.input_butt-delete {
-  background-color: rgb(255, 104, 117);
-  border-color: rgb(255, 104, 117);
-}
 .input_butt-delete:hover {
   background-color: rgb(255, 0, 21);
   border-color: rgb(246, 0, 21);

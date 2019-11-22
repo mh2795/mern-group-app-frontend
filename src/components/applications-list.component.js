@@ -8,17 +8,17 @@ import Button from './simple.components/Button'
 
 const Application = props => (
   <tr>
-    <td>{props.application.company}</td>
-    <td>{props.application.position}</td>
-    <td>{props.application.link}</td>
-    <td>{props.application.rate}</td>
-    <td>{props.application.status}</td>
+    <td className="align-middle">{props.application.company}</td>
+    <td className="align-middle">{props.application.position}</td>
+    <td className="align-middle">{props.application.link}</td>
+    <td className="align-middle">{props.application.rate}</td>
+    <td className="align-middle">{props.application.status}</td>
     <td className="text-right">
       <Link to={"application/edit/" + props.application._id}>
-        <InputTypeSubmit label="Edit" type="edit" />
+        <InputTypeSubmit label="✏️" type="edit" />
       </Link>
       <a href="#" onClick={() => { props.deleteApplication(props.application._id) }}>
-        <InputTypeSubmit label="Delete" type="delete" />
+        <InputTypeSubmit label="🗑" type="delete" />
       </a>
     </td>
   </tr>

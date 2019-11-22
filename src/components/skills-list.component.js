@@ -9,15 +9,15 @@ import Button from './simple.components/Button'
 
 const Skill = props => (
   <tr>
-    <td>{props.skill.skill}</td>
-    <td>{props.skill.proficiency}</td>
-    <td>{props.skill.example}</td>
+    <td className="align-middle">{props.skill.skill}</td>
+    <td className="align-middle">{props.skill.proficiency}</td>
+    <td className="align-middle">{props.skill.example}</td>
     <td className="text-right">
       <Link to={"skill/edit/" + props.skill._id}>
-        <InputTypeSubmit label="Edit" type="edit" />
+        <InputTypeSubmit label="✏️" type="edit" />
       </Link>
       <a href="#" onClick={() => { props.deleteSkill(props.skill._id) }}>
-        <InputTypeSubmit label="Delete" type="delete" />
+        <InputTypeSubmit label="🗑" type="delete" />
       </a>
     </td>
   </tr>
