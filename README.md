@@ -15,8 +15,8 @@
 ## About The Project
 This application was developed as means to keeping track of your important informaton and to have it in one central place. This app is interchangeable and can be used in various ways. Currently this app keeps track of your skills, agenda, and applications. The skills component allows for one to keep track of their skillset and how proficient they are in that particular skill. The agendas component allows for one to keep track of important listings such as meetings,events, and deadlines. Lastly the applications component allows for one to keep track of any applications they have or are going to submit. 
 
-### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+### Technologies Used
+This app was built with the following technologies.
 * [Bootstrap](https://getbootstrap.com)
 * [React](https://jquery.com)
 * [Axios](https://www.npmjs.com/package/axios)
@@ -30,20 +30,16 @@ This section should list any major frameworks that you built your project using.
 
 You will need to do the following before getting started. 
 ### Installation
-* Create react application
-```sh
-npx create-react-app my-app
-cd my-app
-npm start
-```
+ 
 * Install npm packages
 ```sh
-npm install bootstrap axios 
+npm install  
 ```
-* Install Enzyme
-```sh
-npm i --save-dev enzyme enzyme-adapter-react-16
-```
+**By doing npm install the following should be installed.**
+<img width="346" alt="Dependicies" src="https://user-images.githubusercontent.com/54545904/69439261-98115080-0d14-11ea-88da-835de82518eb.png">
+
+
+
 
 
 
