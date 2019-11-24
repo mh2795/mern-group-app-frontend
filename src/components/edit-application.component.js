@@ -85,7 +85,7 @@ export default class EditApplication extends Component {
     axios.put('https://personal-tracker-mrt.herokuapp.com/application/id/' + this.props.match.params.id, application)
       .then(res => console.log(res.data));
 
-    setInterval(function(){ window.location = '/'}, 1000);
+    setInterval(function(){ window.location = '/dashboard'}, 1000);
   }
 
   render() {
